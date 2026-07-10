@@ -1,4 +1,3 @@
-
 # API FastAPI pour la recommandation de culture
 # Endpoint : POST /predict
 
@@ -21,7 +20,10 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://agritechepc.netlify.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
